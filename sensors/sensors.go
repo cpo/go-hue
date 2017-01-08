@@ -157,6 +157,11 @@ func (s *State) String() string {
 	var buffer bytes.Buffer
 	buffer.WriteString(fmt.Sprintf("ButtonEvent:     %d\n", s.ButtonEvent))
 	buffer.WriteString(fmt.Sprintf("Daylight:        %t\n", s.Daylight))
-	buffer.WriteString(fmt.Sprintf("LastUpdated:        %s\n", s.LastUpdated))
+	buffer.WriteString(fmt.Sprintf("Dark:            %t\n", s.Dark))
+	buffer.WriteString(fmt.Sprintf("LastUpdated:     %s\n", s.LastUpdated))
+	buffer.WriteString(fmt.Sprintf("LightLevel:      %d\n", s.LightLevel))
+	buffer.WriteString(fmt.Sprintf("Presence:        %t\n", s.Presence))
+	buffer.WriteString(fmt.Sprintf("Status:          %d\n", s.Status))
+	buffer.WriteString(fmt.Sprintf("Temperature:     %d\n", s.Temperature))
 	return buffer.String()
 }
