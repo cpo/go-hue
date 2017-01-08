@@ -43,10 +43,14 @@ type Config struct {
 }
 
 type State struct {
-	Daylight    bool   `json:"daylight,omitempty"`
 	Presence    bool   `json:"presence,omitempty"`
 	LastUpdated string `json:"lastupdated,omitempty"`
 	ButtonEvent int16  `json:"buttonevent,omitempty"`
+	Status      int16  `json:"status,omitempty"`
+	Temperature int16  `json:"temperature,omitempty"`
+	LightLevel  int16  `json:"lightlevel,omitempty"`
+	Dark        bool   `json:"dark,omitempty"`
+	Daylight    bool   `json:"daylight,omitempty"`
 }
 
 func New(hostname string, username string) *Sensors {
